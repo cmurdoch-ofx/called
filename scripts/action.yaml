@@ -18,6 +18,6 @@ runs:
     - run: python3 ${GITHUB_ACTION_PATH}/main.py
       shell: bash
       env:
-        JSON_INPUT: ${{ inputs.json_input }}
-        SECRET_TOKEN: ${{ inputs.secret_token }}
-        SECRET_USER: ${{ inputs.secret_user }}
+        JSON_INPUT: ${{ inputs.json-input }}
+        SECRET_TOKEN: ${{ inputs.secret-token }}
+        SECRET_USER: ${{ inputs.secret-user }}
