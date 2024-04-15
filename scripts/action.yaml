@@ -1,0 +1,23 @@
+name: 'Testing the passing of envs'
+
+description: 'Testing passing of envs as inputs'
+inputs:
+  json-input:
+    description: 'Input that contains information to create the notification'
+    required: true
+  secret-token:
+    description: 'Auth token required to create JIRA'
+    required: true
+  secret-user:
+    description: 'Auth user required to create JIRA'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: python3 ${GITHUB_ACTION_PATH}/main.py
+      shell: bash
+      env:
+        JSON_INPUT: ${{ inputs.json_input }}
+        SECRET_TOKEN: ${{ inputs.secret_token }}
+        SECRET_USER: ${{ inputs.secret_user }}
