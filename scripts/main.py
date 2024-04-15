@@ -1,9 +1,9 @@
 import os
 
 
-secret_token = os.getenv('SECRET_TOKEN', None)
-secret_user = os.getenv('SECRET_USER', None)
-json_input = os.getenv('JSON_INPUT', None)
+secret_token = os.getenv('SECRET_TOKEN', 'Unable to get')
+secret_user = os.getenv('SECRET_USER', 'Unable to get')
+json_input = os.getenv('JSON_INPUT', 'Unable to get')
 
 
 def main():
